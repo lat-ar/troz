@@ -1,0 +1,67 @@
+/* Landing overlay */
+#landing-overlay {
+  position: fixed;
+  inset: 0;
+  background: #1a1a1a;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+}
+.landing-inner {
+  width: min(680px, 92vw);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 28px;
+  text-align: center;
+  padding: 24px 0 40px;
+}
+.landing-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.5px;
+  color: #f2f2f2;
+  font-size: clamp(40px, 9.5vw, 72px);
+  margin: 0;
+  text-transform: none;
+}
+.landing-hashtag {
+  font-family: "Quicksand", sans-serif;
+  margin: 8px 0 0;
+  color: #e0e0e0;
+  font-weight: 700;
+  font-size: clamp(16px, 4vw, 22px);
+}
+.landing-visual {
+  display: grid;
+  place-items: center;
+}
+.landing-image {
+  width: min(520px, 86vw);
+  height: auto;
+  filter: drop-shadow(0 24px 24px rgba(0,0,0,0.12));
+}
+.landing-cta {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: min(420px, 82vw);
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f2f2f2, #e0e0e0);
+  color: #1a1a1a;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
+  font-size: clamp(18px, 5vw, 24px);
+  text-transform: none;
+  box-shadow: 0 10px 0 rgba(255, 255, 255, 0.35), 0 24px 42px rgba(255, 255, 255, 0.25);
+  transition: transform .08s ease, box-shadow .2s ease, filter .2s ease;
+}
+.landing-cta:active {
+  transform: translateY(3px);
+  box-shadow: 0 6px 0 rgba(255, 255, 255, 0.35), 0 12px 28px rgba(255, 255, 255, 0.25);
+}
+
